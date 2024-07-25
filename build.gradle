@@ -1,0 +1,41 @@
+plugins {
+    id 'com.github.johnrengelman.shadow' version '8.1.1'
+    id 'java'
+}
+
+group = 'com.github.sysc4ll3r'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compileOnly 'org.projectlombok:lombok:1.18.34'
+    annotationProcessor 'org.projectlombok:lombok:1.18.34'
+    implementation 'net.portswigger.burp.extensions:montoya-api:2023.12.1'
+    implementation 'org.codehaus.janino:janino:3.1.12'
+    implementation 'com.fifesoft:rsyntaxtextarea:3.5.0'
+    implementation 'com.github.jiconfont:jiconfont-swing:1.0.1'
+    implementation 'com.github.jiconfont:jiconfont-google_material_design_icons:2.2.0.2'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.17.2'
+    implementation 'com.fasterxml.jackson.core:jackson-annotations:2.17.2'
+    implementation 'com.esotericsoftware.kryo:kryo5:5.5.0'
+    implementation 'com.github.luben:zstd-jni:1.5.6-4'
+}
+
+
+
+apply plugin: "java"
+apply plugin: "com.github.johnrengelman.shadow"
+
+tasks {
+    shadowJar {
+        duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+        archiveBaseName.set(rootProject.name)
+        mergeServiceFiles()
+        manifest {
+            attributes("Main-Class" : "com.github.sysc4ll3r.serialog.extension.SeriaLogExtension")
+        }
+    }
+}
