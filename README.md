@@ -7,7 +7,7 @@ SeriaLog is a Burp Suite extension that provides comprehensive logging capabilit
 ## Features
 
 1. **Comprehensive Logging**:
-    - Logs data from all Burp Suite tools (Proxy, Spider, Scanner, Intruder, Repeater, etc.).
+    - Logs data from all Burp Suite tools (Proxy, Sequencer, Scanner, Intruder, Repeater, etc.).
 
 2. **Advanced Filtering**:
     - Standard filtering options similar to Burp Suite's native interface.
