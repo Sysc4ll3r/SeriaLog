@@ -61,7 +61,7 @@ public class LogTab extends JComponent {
         add(topPanel, BorderLayout.NORTH);
 
         JSplitPane splitPane = new JSplitPane(JSplitPane.VERTICAL_SPLIT);
-        splitPane.setResizeWeight(0.5);
+ //       splitPane.setResizeWeight(0.5);
 
         notesArea = new JTextArea();
         notesArea.getDocument().addDocumentListener(new DocumentListener() {

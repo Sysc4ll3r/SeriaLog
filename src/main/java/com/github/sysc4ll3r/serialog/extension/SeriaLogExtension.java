@@ -9,7 +9,7 @@ import java.text.MessageFormat;
 
 public class SeriaLogExtension implements BurpExtension {
     private static final String NAME = "SeriaLog";
-    private static final String VERSION = "V1.0";
+    private static final String VERSION = "V1.1";
     private static final String AUTHOR = "Sysc4ll3r";
     public static MontoyaApi montoyaApi;
     public static Preferences props;
